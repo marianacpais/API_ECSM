@@ -8,5 +8,5 @@ Documentação da API do **Repositório de Dados para Investigação das Equipa 
 
 |  |  |  |
 |---|---|---|
-|     [Introdução](/01intro/)   |     [Autenticação](/02autenticacao/)    |     [Códigos de Erro e   Respostas da API](/03codigos-erro/)    |
-|     [Segurança e Boas Práticas](/04seguranca/)    |     [Esquema Geral da   Estrutura de Dados](05esquema-dados)    |     [Métodos Suportados](/06metodos/)    |
+|     [Introdução](/API_ECSM/01intro/)   |     [Autenticação](/API_ECSM/02autenticacao/)    |     [Códigos de Erro e   Respostas da API](/API_ECSM/03codigos-erro/)    |
+|     [Segurança e Boas Práticas](/API_ECSM/04seguranca/)    |     [Esquema Geral da   Estrutura de Dados](/API_ECSM/05esquema-dados)    |     [Métodos Suportados](/API_ECSM/06metodos/)    |
