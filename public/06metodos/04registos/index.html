@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="canonical" href="https://marianacpais.github.io/API_ECSM/06metodos/04registos/">
+
+    <title>
+        
+        Registos | Documentação da API das ECSM
+        
+    </title>
+
+    
+    <link href="https://marianacpais.github.io/API_ECSMcss/fontawesome.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://marianacpais.github.io/API_ECSM/css/ace.min.css">
+
+    
+
+    
+    
+        
+    
+
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top" id="navbarMain">
+    <div class="container">
+        <div>
+            <a class="navbar-brand" href="/API_ECSM">
+                
+                Documentação da API das ECSM
+            </a>
+        </div>
+        
+    </div>
+    </nav>
+<div class="container-fluid">
+            <div class="row">
+
+                <div class="docs-sidenav order-0 col-12 col-md-3 col-lg-2 col-xl-2 position-sticky border-right"><nav class="navbar navbar-expand-md navbar-light pl-0">
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#sidenav-left-collapse" aria-controls="sidenav-left-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
+            
+         <ul class="navbar-nav flex-column pt-3">
+    <li data-nav-id="/API_ECSM/01intro/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/01intro/"><h6>Introdução</h6></a>
+    </li>
+    <li data-nav-id="/API_ECSM/02autenticacao/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/02autenticacao/"><h6>Autenticação</h6></a>
+    </li>
+    <li data-nav-id="/API_ECSM/03codigos-erro/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/03codigos-erro/"><h6>Códigos de Erro e Respostas da API</h6></a>
+    </li>
+    <li data-nav-id="/API_ECSM/04seguranca/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/04seguranca/"><h6>Segurança e Boas Práticas</h6></a>
+    </li>
+    <li data-nav-id="/API_ECSM/05esquema-dados/" class="nav-item my-1 haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/05esquema-dados/"><h6>Esquema Geral da Estrutura de Dados</h6></a>
+        <ul class="list-unstyled ml-2">
+    <li data-nav-id="/API_ECSM/05esquema-dados/01utentes/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/05esquema-dados/01utentes/"><h6>Tabela &#39;Utentes&#39;</h6></a>
+    </li>
+    <li data-nav-id="/API_ECSM/05esquema-dados/02equipas/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/05esquema-dados/02equipas/"><h6>Tabela &#39;Equipas&#39;</h6></a>
+    </li>
+    <li data-nav-id="/API_ECSM/05esquema-dados/03inquerito/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/05esquema-dados/03inquerito/"><h6>Tabela &#39;Inquérito aos Profissionais&#39;</h6></a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/API_ECSM/06metodos/" class="nav-item my-1 parent haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/06metodos/"><h6>Métodos Suportados</h6></a>
+        <ul class="list-unstyled ml-2">
+    <li data-nav-id="/API_ECSM/06metodos/01nomes-campos/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/06metodos/01nomes-campos/"><h6>Nomes dos Campos</h6></a>
+    </li>
+    <li data-nav-id="/API_ECSM/06metodos/02instrumentos/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/06metodos/02instrumentos/"><h6>Instrumentos</h6></a>
+    </li>
+    <li data-nav-id="/API_ECSM/06metodos/03metadados/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/06metodos/03metadados/"><h6>Metadados</h6></a>
+    </li>
+    <li data-nav-id="/API_ECSM/06metodos/04registos/" class="nav-item my-1 active
+        ">
+        
+        <a class="nav-link p-0" href="/API_ECSM/06metodos/04registos/"><h6>Registos</h6></a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+
+
+</div>
+                <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#exportação-de-registos">Exportação de Registos</a></li>
+    <li><a href="#importação-de-registos">Importação de Registos</a></li>
+  </ul>
+</nav>
+</div>
+</div>
+                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
+                
+
+<h1>Registos</h1>
+
+<h2 id="exportação-de-registos">Exportação de Registos</h2>
+<p><strong>Designação</strong></p>
+<p><em>Export Records</em></p>
+<p><strong>Descrição</strong></p>
+<p>Este método permite a exportação de um conjunto de registos de um projeto.</p>
+
+
+<div class="card my-3 border-top-0 border-right-0 border-bottom-0 border-left border-info rounded" style="border-width:4px !important;">
+    <div class="wrap border border-left-0 rounded">
+        
+        <div class="card-header border-0 bg-white pl-3 text-info">
+            <h3>Nota sobre privilégios de exportação</h3>
+        </div>
+        
+        <div class="card-body pt-1">
+            Importa referir que as permissões de exportação de dados se irão aplicar a esta operação. Isto é, se um utilizador não tiver permissão de exportação para o projeto (<em>&ldquo;No Access&rdquo;</em>), não ocorrerá exportação de dados pela API e será retornada uma mensagem de erro. Se o utilizador tiver permissões de exportação do tipo <em>&ldquo;De-identified&rdquo;</em> ou <em>&ldquo;Remove All Identifier Fields&rdquo;</em> alguns dos campos de dados poderão ser removidos e filtrados de acordo com estas configurações.
+        </div>
+    </div>
+</div>
+
+<p><strong>URL</strong></p>
+<pre><code>https://&lt;URL_base&gt;/api/
+</code></pre>
+<p><strong>Métodos de Chamada Compatíveis</strong></p>
+<p><code>POST</code></p>
+<p><strong>Parâmetros (sensível à capitulação)</strong></p>
+<ul>
+<li>
+<p><strong>Obrigatórios</strong></p>
+<ul>
+<li>
+<p><code>token</code> - Chave de API específica de um determinado  utilizador e projeto/grupo de variáveis (ver <a href="../../05esquema-dados/">&ldquo;Esquema Geral da Estrutura de Dados&rdquo;</a>).</p>
+</li>
+<li>
+<p><code>content</code> - <code>record</code></p>
+</li>
+<li>
+<p><code>format</code> - <code>csv</code>, <code>json</code>, <code>xml</code> [default], <code>odm</code> (&lsquo;odm&rsquo; refere-se ao formato CDISC ODM XML, especificamente ao ODM versão 1.3.1)</p>
+</li>
+<li>
+<p><code>type</code></p>
+<ul>
+<li><code>flat</code> - retorna um registo por linha [default]</li>
+<li><code>eav</code> - retorna um elemento de dados (<em>data point</em>) por linha. Assim, cada linha terá o &ldquo;record ID&rdquo;, o &ldquo;field_name&rdquo; e o respetivo valor.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Opcionais</strong></p>
+<ul>
+<li>
+<p><code>records</code> - um <em>array</em> de nomes de registos a especificar os que se pretende requerer (por defeito, todos os registos são exportados)</p>
+</li>
+<li>
+<p><code>fields</code> - um <em>array</em> de nomes de campos a especificar os que se pretende requerer (por defeito todos são exportados)</p>
+</li>
+<li>
+<p><code>forms</code> - um <em>array</em> de nomes de instrumentos em relação aos quais se pretende requerer os registos. Se o nome do instrumento tiver um espaço, este deve ser substituido por sum <em>underscore</em> (por defeito todos os registos são exportados)</p>
+</li>
+<li>
+<p><code>rawOrLabel</code> - <code>raw</code> [default], <code>label</code> - exporta ou os valores <em>raw</em> das variáveis codificadas ou as etiquetas (<em>labels</em>) das opções dos campos de escolha múltipla.</p>
+</li>
+<li>
+<p><code>rawOrLabelHeaders</code> - <code>raw</code> [default], <code>label</code> - (apenas para os formatos &lsquo;csv&rsquo; e tipo &lsquo;flat&rsquo;) para os cabeçalhos de CSV, exporta os nomes das variáveis/campos (<code>raw</code>) ou as etiquetas dos campos (<code>label</code>)</p>
+</li>
+<li>
+<p><code>exportCheckboxLabel</code> - <code>true</code>, <code>false</code> [default] - especifica o formato dos valores de campos de <em>checkboxes</em> especificamente quando se exporta os dados como &ldquo;labels&rdquo; (insto é, quando <code>rawOrLabel</code>=<code>label</code>) no formato &ldquo;flat&rdquo; (isto é, quando <code>type</code>=<code>flat</code>). Quando se exportam &ldquo;labels&rdquo;, por defeito todas as <em>checkboxes</em> terão ou o valor &ldquo;Checked&rdquo;, se selecionadas, ou &ldquo;Unchecked&rdquo;, se não selecionadas. No entanto, se <code>exportCheckboxLabel</code> for <code>true</code> o valor da <em>checkbox</em> na exportação corresponderá à etiqueta (<em>label</em>) se selecionada e estará vazia no caso de não ser selecionada. Se <code>rawOrLabel</code>=<code>false</code> ou se <code>type</code>=<code>eav</code> então <code>exportCheckboxLabel</code>será ignorado.</p>
+</li>
+<li>
+<p><code>returnFormat</code> - <code>csv</code>, <code>json</code>, <code>xml</code> - especifica o formato das mensagens de erro. Se não for especificado o formato selecionado será o mesmo do parâmetro <code>format</code>, que por defeito é &lsquo;xml&rsquo;. A lista retornada conterá o nome original do campo (variável) e também o nome de exportação do mesmo.</p>
+</li>
+<li>
+<p><code>filterLogic</code> - <em>string</em> que define um filtro lógico (exemplo: [idade] &gt; 30) para a filtragem dos dados que serão retornados pela API, em que esta apenas retornará os registos em que avaliação desta expressão seja <code>TRUE</code>. Este parâmetro permanece em branco por defeito. No caso de sintaxe errada na expressão inserida a API retorna uma mensagem de erro.</p>
+</li>
+<li>
+<p><code>dateRangeBegin</code> - retorna apenas os registos criados ou modificados após uma determinada data/hora, providenciado um <em>timestamp</em> no formato YYYY-MM-DD HH:MM:SS. Se não especificado não assume nenhum tempo de início.</p>
+</li>
+<li>
+<p><code>dateRangeEnd</code> - retorna apenas os registos criados ou modificados antes de uma determinada data/hora, providenciado um <em>timestamp</em> no formato YYYY-MM-DD HH:MM:SS. Se não especificado utiliza a data/hora atuais do servidor.</p>
+</li>
+<li>
+<p><code>csvDelimiter</code> - define o caracter delimitador utilizado para separar os valores num ficheiro de dados CSV (apenas para o formato CSV). As opções incluem: vírgula &lsquo;,&rsquo; [default], tabulação, ponto-e-vírgula &lsquo;;&rsquo;, barra vertical (<em>pipe</em>) &lsquo;|&rsquo; ou sinal de chamada &lsquo;^&rsquo;. O caracter deve ser providênciado entre aspas.</p>
+</li>
+<li>
+<p><code>decimalCharacter</code> - se especificado, força todos os númerosque contenham parte decimal a ter o mesmo caracter decimal, o que será aplicado a todos os campos calculados e de texto com validação numérica. As opções incluem vírgula &lsquo;,&rsquo; ou ponto &lsquo;.&rsquo;, mas quando este parâmetro é deixado em branco a exportação ocorre com a formatação decimal nativa.</p>
+</li>
+<li>
+<p><code>exportBlankForGrayFormStatus</code> - <code>true</code>, <code>false</code> [default] - especifica se é ou não exportado um valor para os campos de <em>status</em> de completitude de um instrumento (que apresentam um icon cinzento na interface <em>web</em>). Estes instrumentos podem ser exportados ou com um valor em branco para este campo ou com o valor &ldquo;0&rdquo; para &ldquo;Incompleto&rdquo;. Recomenda-se a exportação de valores em branco se esta exportação tem como objetivo a re-importação.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Resposta</strong></p>
+<p>Retorna os dados de um projeto no formato e tipo especificados e ordenados pelo registo (chave primária do projeto).</p>
+<p><strong>EAV XML:</strong></p>
+
+
+
+
+
+
+    
+    
+
+
+
+
+<div class="position-relative">
+    <div class="position-absolute" style="right:0;">
+        <button class="btn btn-light" data-clipboard-target="#clipboard_a963941f17">
+        Copy
+        </button>
+    </div>
+    <div id="clipboard_a963941f17">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;records&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;item&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;record&gt;&lt;/record&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;field_name&gt;&lt;/field_name&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;value&gt;&lt;/value&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;redcap_event_name&gt;&lt;/redcap_event_name&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/records&gt;</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+
+
+
+
+<p><strong>Flat XML:</strong></p>
+
+
+
+
+
+
+    
+    
+
+
+
+
+<div class="position-relative">
+    <div class="position-absolute" style="right:0;">
+        <button class="btn btn-light" data-clipboard-target="#clipboard_e83d467dcd">
+        Copy
+        </button>
+    </div>
+    <div id="clipboard_e83d467dcd">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;records&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;item&gt;</span>
+</span></span><span style="display:flex;"><span>    cada &#34;data point&#34; como um elemento
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/records&gt;</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+
+
+
+
+<h2 id="importação-de-registos">Importação de Registos</h2>
+<p><strong>Designação</strong></p>
+<p><em>Import Records</em></p>
+<p><strong>Descrição</strong></p>
+<p>Este método permite a importação de um conjunto de registos para um projeto.</p>
+<p><strong>URL</strong></p>
+<pre><code>https://&lt;URL_base&gt;/api/
+</code></pre>
+<p><strong>Métodos de Chamada Compatíveis</strong></p>
+<p><code>POST</code></p>
+<p><strong>Parâmetros (sensível à capitulação)</strong></p>
+<ul>
+<li>
+<p><strong>Obrigatórios</strong></p>
+<ul>
+<li>
+<p><code>token</code> - Chave de API específica de um determinado  utilizador e projeto/grupo de variáveis (ver <a href="../../05esquema-dados/">&ldquo;Esquema Geral da Estrutura de Dados&rdquo;</a>).</p>
+</li>
+<li>
+<p><code>content</code> - <code>record</code></p>
+</li>
+<li>
+<p><code>format</code> - <code>csv</code>, <code>json</code>, <code>xml</code> [default], <code>odm</code> (&lsquo;odm&rsquo; refere-se ao formato CDISC ODM XML, especificamente ao ODM versão 1.3.1)</p>
+</li>
+<li>
+<p><code>type</code></p>
+<ul>
+<li><code>flat</code> - retorna um registo por linha [default]</li>
+<li><code>eav</code> - retorna um elemento de dados (<em>data point</em>) por linha. Assim, cada linha terá o &ldquo;record ID&rdquo;, o &ldquo;field_name&rdquo; e o respetivo valor.</li>
+</ul>
+</li>
+<li>
+<p><code>overwriteBehavior</code></p>
+<ul>
+<li><code>normal</code> - os valores em branco/omissos são ignorados [default]</li>
+<li><code>overwrite</code> - os valores em branco/omissos são validos e reescritos sobre dados existentes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>data</code> - dados formatados para serem importados.</p>
+</li>
+</ul>
+<p><strong>EAV XML:</strong></p>
+
+
+
+
+
+
+    
+    
+
+
+
+
+<div class="position-relative">
+    <div class="position-absolute" style="right:0;">
+        <button class="btn btn-light" data-clipboard-target="#clipboard_a963941f17">
+        Copy
+        </button>
+    </div>
+    <div id="clipboard_a963941f17">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;records&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;item&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;record&gt;&lt;/record&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;field_name&gt;&lt;/field_name&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;value&gt;&lt;/value&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;redcap_event_name&gt;&lt;/redcap_event_name&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/records&gt;</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+
+
+
+
+<p><strong>Flat XML:</strong></p>
+
+
+
+
+
+
+    
+    
+
+
+
+
+<div class="position-relative">
+    <div class="position-absolute" style="right:0;">
+        <button class="btn btn-light" data-clipboard-target="#clipboard_e83d467dcd">
+        Copy
+        </button>
+    </div>
+    <div id="clipboard_e83d467dcd">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;records&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;item&gt;</span>
+</span></span><span style="display:flex;"><span>    cada &#34;data point&#34; como um elemento
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/records&gt;</span>
+</span></span></code></pre></div>
+    </div>
+</div>
+
+
+
+
+<ul>
+<li>
+<p><strong>Opcionais:</strong></p>
+<ul>
+<li>
+<p><code>dateFormat</code> - <code>MDY</code>, <code>DMY</code>, <code>YMD</code> [default] - especifica o formato dos valores de datas a serem importadas em campos de data ou data-tempo (M corresponde a mês, D a dia e Y a ano). Nota: o valor por defeito é YMD, que deve ser formatado com hífens (isto é, Y-M-D), enquanto que os formatos MDY e DMY desem ser sempre formatados com barras (isto é, M/D/Y ou D/M/Y respetivamente).</p>
+</li>
+<li>
+<p><code>csvDelimiter</code> - define o caracter delimitador utilizado para separar os valores num ficheiro de dados CSV (apenas para o formato CSV). As opções incluem: vírgula &lsquo;,&rsquo; [default], tabulação, ponto-e-vírgula &lsquo;;&rsquo;, barra vertical (<em>pipe</em>) &lsquo;|&rsquo; ou sinal de chamada &lsquo;^&rsquo;. O caracter deve ser providênciado entre aspas.</p>
+</li>
+<li>
+<p><code>returnContent</code> - define a informação que é retornada: <code>count</code> [default] - retorna o número de registos inseridos e <code>id</code> retorna o uma lista com todos os <code>record_id</code> dos registos inseridos.</p>
+</li>
+<li>
+<p><code>returnFormat</code> - <code>csv</code>, <code>json</code>, <code>xml</code> - especifica o formato das mensagens de erro. Se não for especificado o formato selecionado será o mesmo do parâmetro <code>format</code>, que por defeito é &lsquo;xml&rsquo;. A lista retornada conterá o nome original do campo (variável) e também o nome de exportação do mesmo.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Resposta</strong></p>
+<p>Retorna o conteúdo especificado em <code>returnContent</code>: o número de registos inseridos ou uma lista com todos os <code>record_id</code> dos registos inseridos.</p>
+
+
+    
+
+
+                    
+                    <div class="row"><div class="position-relative mx-auto col-lg-9">
+                          <div class="bg-primary overflow-hidden p-3 mt-5 shadow">
+
+    <h4 class="text-white text-center">Continuar a Leitura</h4>
+
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/API_ECSM/06metodos/03metadados/" title="Metadados"><i class="fas fa-chevron-left p-1"></i>Metadados</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/API_ECSM/06metodos/01nomes-campos/" title="Nomes dos Campos">Nomes dos Campos<i class="fas fa-chevron-right p-1"></i></a>
+    </div>
+</div>
+
+
+                        </div></div> 
+
+                </div>
+
+            </div> 
+
+        </div> 
+<script src="https://marianacpais.github.io/API_ECSMlib/jquery.min.js"></script> 
+<script src="https://marianacpais.github.io/API_ECSMlib/popper.min.js"></script> 
+
+<script src="https://marianacpais.github.io/API_ECSMjs/bootstrap.min.js"></script> 
+
+
+<script type="text/javascript" src="/API_ECSM/plugins/lunr.min.js"></script>
+<script type="text/javascript" src="/API_ECSM/plugins/auto-complete.js"></script>
+<link href="/API_ECSM/plugins/auto-complete.css" rel="stylesheet">
+<script type="text/javascript">
+  
+      var baseurl = "https:\/\/marianacpais.github.io\/API_ECSM";
+  
+</script>
+<script type="text/javascript" src="/API_ECSM/plugins/search.js"></script>
+
+
+<script type="text/javascript" src="/API_ECSM/plugins/clipboard.js"></script>
+<script>
+  new ClipboardJS('.btn');
+</script>
+</body>
+</html>
