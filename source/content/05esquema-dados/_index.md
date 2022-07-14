@@ -12,15 +12,15 @@ Para efetuar operações de leitura ou escrita relativos a cada um destes grupos
 
 As variáveis e respetiva caracterização pertecentes a cada um destes grupos encontram-se descritas nas secções que se seguem:
 
-- [Tabela "Utentes"](/05esquema-dados/01utentes)
+- [Tabela "Utentes"](/API_ECSM/05esquema-dados/01utentes)
   - Acesso utilizando a **chave de API "Utentes"**
   - Nome do projeto no REDCap: ECSM_Utentes
   - Inclui as variáveis correspondentes a cada um dos utentes (cada registo corresponde a um conjunto de dados relativo a um único utente)
-- [Tabela "Equipas"](/05esquema-dados/02equipas/)
+- [Tabela "Equipas"](/API_ECSM/05esquema-dados/02equipas/)
   - Acesso utilizando a **chave de API "Equipas"**
   - Nome do projeto no REDCap: ECSM_Equipa
   - Inclui as variáveis correspondentes a cada uma das Equipa Comunitária de Saúde Mental (cada registo corresponde a um conjunto de dados relativos a utentes, profissionais e atividades desenvolvidas por uma equipa de forma agregada)
-- [Tabela "Inquérito aos Profissionais"](/05esquema-dados/03inquerito/)
+- [Tabela "Inquérito aos Profissionais"](/API_ECSM/05esquema-dados/03inquerito/)
   - Acesso utilizando a **chave de API "Inquérito"**
   - Nome do projeto no REDCap: ECSM_Inquérito Profissionais
   - Inclui as variáveis que contém os resultados do Inquérito aos Profissionais (cada registo corresponde a um inquérito a um determinado profissional)
