@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="canonical" href="https://github.com/marianacpais/API_ECSM/05esquema-dados/03inquerito/">
+
+    <title>
+        
+        Tabela &#39;Inquérito aos Profissionais&#39; | Documentação da API das ECSM
+        
+    </title>
+
+    
+    <link href="https://github.com/marianacpais/API_ECSM/css/fontawesome.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://github.com/marianacpais/API_ECSM/css/ace.min.css">
+
+    
+
+    
+    
+        
+    
+
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top" id="navbarMain">
+    <div class="container">
+        <div>
+            <a class="navbar-brand" href="/marianacpais/API_ECSM">
+                
+                Documentação da API das ECSM
+            </a>
+        </div>
+        
+    </div>
+    </nav>
+<div class="container-fluid">
+            <div class="row">
+
+                <div class="docs-sidenav order-0 col-12 col-md-3 col-lg-2 col-xl-2 position-sticky border-right"><nav class="navbar navbar-expand-md navbar-light pl-0">
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#sidenav-left-collapse" aria-controls="sidenav-left-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
+            <form class="form-inline my-2 my-lg-0 searchbox">
+               <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder="Search">
+            </form>
+         <ul class="navbar-nav flex-column pt-3">
+    <li data-nav-id="/marianacpais/API_ECSM/01intro/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/01intro/"><h6>Introdução</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/02autenticacao/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/02autenticacao/"><h6>Autenticação</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/03codigos-erro/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/03codigos-erro/"><h6>Códigos de Erro e Respostas da API</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/04seguranca/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/04seguranca/"><h6>Segurança e Boas Práticas</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/05esquema-dados/" class="nav-item my-1 parent haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/05esquema-dados/"><h6>Esquema Geral da Estrutura de Dados</h6></a>
+        <ul class="list-unstyled ml-2">
+    <li data-nav-id="/marianacpais/API_ECSM/05esquema-dados/01utentes/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/05esquema-dados/01utentes/"><h6>Tabela &#39;Utentes&#39;</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/05esquema-dados/02equipas/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/05esquema-dados/02equipas/"><h6>Tabela &#39;Equipas&#39;</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/05esquema-dados/03inquerito/" class="nav-item my-1 active
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/05esquema-dados/03inquerito/"><h6>Tabela &#39;Inquérito aos Profissionais&#39;</h6></a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/06metodos/" class="nav-item my-1 haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/06metodos/"><h6>Métodos Suportados</h6></a>
+        <ul class="list-unstyled ml-2">
+    <li data-nav-id="/marianacpais/API_ECSM/06metodos/01nomes-campos/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/06metodos/01nomes-campos/"><h6>Nomes dos Campos</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/06metodos/02instrumentos/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/06metodos/02instrumentos/"><h6>Instrumentos</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/06metodos/03metadados/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/06metodos/03metadados/"><h6>Metadados</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/06metodos/04registos/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/06metodos/04registos/"><h6>Registos</h6></a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+
+
+</div>
+                <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
+	<nav id="TableOfContents"></nav>
+</div>
+</div>
+                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
+                
+
+<h1>Tabela &#39;Inquérito aos Profissionais&#39;</h1>
+
+<p>A tabela que se segue descreve as variáveis constantes no projeto/grupo &ldquo;Inquérito aos Profissionais&rdquo;. Este, inclui o seguinte instrumento/&ldquo;sub-grupo&rdquo; de variáveis:</p>
+<ul>
+<li>ECSM_Inquérito Profissionais</li>
+</ul>
+<p>Para efetuar operações relativas a este grupo o utilizador precisa de utilizar a <strong>chave de API &ldquo;Inquérito&rdquo;</strong>.</p>
+
+<div class="table table-hover" role="alert">
+    <table>
+<thead>
+<tr>
+<th>Instrumento</th>
+<th>Nome da Variável</th>
+<th>Descrição</th>
+<th>Tipo de Dados</th>
+<th>Codificação/Validação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ECSM_Inquérito   Profissionais</td>
+<td><strong>grau_de_satisfacao_profiss</strong></td>
+<td>Grau de satisfacao profissionais     Popular as   escalas que se considerarem necessárias para avaliar o grau de satisfação dos   profissionais de saúde.</td>
+<td>Número inteiro</td>
+<td>*Obrigatório</td>
+</tr>
+<tr>
+<td>ECSM_Inquérito   Profissionais</td>
+<td><strong>indicadores_de_seguranca_n</strong></td>
+<td>Indicadores de seguranca no trabalho     Popular de   acordo com critérios para segurança no trabalho aplicáveis a estes   profissionais.</td>
+<td>A definir</td>
+<td>*Obrigatório     Codificação: a definir</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+    
+
+
+                    
+                    <div class="row"><div class="position-relative mx-auto col-lg-9">
+                          <div class="bg-primary overflow-hidden p-3 mt-5 shadow">
+
+    <h4 class="text-white text-center">Continuar a Leitura</h4>
+
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/marianacpais/API_ECSM/05esquema-dados/02equipas/" title="Tabela &#39;Equipas&#39;"><i class="fas fa-chevron-left p-1"></i>Tabela &#39;Equipas&#39;</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/marianacpais/API_ECSM/06metodos/" title="Métodos Suportados">Métodos Suportados<i class="fas fa-chevron-right p-1"></i></a>
+    </div>
+</div>
+
+
+                        </div></div> 
+
+                </div>
+
+            </div> 
+
+        </div> 
+<script src="https://github.com/marianacpais/API_ECSM/lib/jquery.min.js"></script> 
+<script src="https://github.com/marianacpais/API_ECSM/lib/popper.min.js"></script> 
+
+<script src="https://github.com/marianacpais/API_ECSM/js/bootstrap.min.js"></script> 
+
+
+<script type="text/javascript" src="/marianacpais/API_ECSM/plugins/lunr.min.js"></script>
+<script type="text/javascript" src="/marianacpais/API_ECSM/plugins/auto-complete.js"></script>
+<link href="/marianacpais/API_ECSM/plugins/auto-complete.css" rel="stylesheet">
+<script type="text/javascript">
+  
+      var baseurl = "https:\/\/github.com\/marianacpais\/API_ECSM\/";
+  
+</script>
+<script type="text/javascript" src="/marianacpais/API_ECSM/plugins/search.js"></script>
+
+
+<script type="text/javascript" src="/marianacpais/API_ECSM/plugins/clipboard.js"></script>
+<script>
+  new ClipboardJS('.btn');
+</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="canonical" href="https://github.com/marianacpais/API_ECSM/06metodos/02instrumentos/">
+
+    <title>
+        
+        Instrumentos | Documentação da API das ECSM
+        
+    </title>
+
+    
+    <link href="https://github.com/marianacpais/API_ECSM/css/fontawesome.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://github.com/marianacpais/API_ECSM/css/ace.min.css">
+
+    
+
+    
+    
+        
+    
+
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top" id="navbarMain">
+    <div class="container">
+        <div>
+            <a class="navbar-brand" href="/marianacpais/API_ECSM">
+                
+                Documentação da API das ECSM
+            </a>
+        </div>
+        
+    </div>
+    </nav>
+<div class="container-fluid">
+            <div class="row">
+
+                <div class="docs-sidenav order-0 col-12 col-md-3 col-lg-2 col-xl-2 position-sticky border-right"><nav class="navbar navbar-expand-md navbar-light pl-0">
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#sidenav-left-collapse" aria-controls="sidenav-left-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
+            <form class="form-inline my-2 my-lg-0 searchbox">
+               <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder="Search">
+            </form>
+         <ul class="navbar-nav flex-column pt-3">
+    <li data-nav-id="/marianacpais/API_ECSM/01intro/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/01intro/"><h6>Introdução</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/02autenticacao/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/02autenticacao/"><h6>Autenticação</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/03codigos-erro/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/03codigos-erro/"><h6>Códigos de Erro e Respostas da API</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/04seguranca/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/04seguranca/"><h6>Segurança e Boas Práticas</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/05esquema-dados/" class="nav-item my-1 haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/05esquema-dados/"><h6>Esquema Geral da Estrutura de Dados</h6></a>
+        <ul class="list-unstyled ml-2">
+    <li data-nav-id="/marianacpais/API_ECSM/05esquema-dados/01utentes/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/05esquema-dados/01utentes/"><h6>Tabela &#39;Utentes&#39;</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/05esquema-dados/02equipas/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/05esquema-dados/02equipas/"><h6>Tabela &#39;Equipas&#39;</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/05esquema-dados/03inquerito/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/05esquema-dados/03inquerito/"><h6>Tabela &#39;Inquérito aos Profissionais&#39;</h6></a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/06metodos/" class="nav-item my-1 parent haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/06metodos/"><h6>Métodos Suportados</h6></a>
+        <ul class="list-unstyled ml-2">
+    <li data-nav-id="/marianacpais/API_ECSM/06metodos/01nomes-campos/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/06metodos/01nomes-campos/"><h6>Nomes dos Campos</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/06metodos/02instrumentos/" class="nav-item my-1 active
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/06metodos/02instrumentos/"><h6>Instrumentos</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/06metodos/03metadados/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/06metodos/03metadados/"><h6>Metadados</h6></a>
+    </li>
+    <li data-nav-id="/marianacpais/API_ECSM/06metodos/04registos/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/marianacpais/API_ECSM/06metodos/04registos/"><h6>Registos</h6></a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+
+
+</div>
+                <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#exportação-de-instrumentos-formulários-de-introdução-de-dados">Exportação de Instrumentos (Formulários de Introdução de Dados)</a></li>
+    <li><a href="#exportação-de-ficheiro-pdf-dos-instrumentos">Exportação de Ficheiro PDF dos Instrumentos</a></li>
+  </ul>
+</nav>
+</div>
+</div>
+                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
+                
+
+<h1>Instrumentos</h1>
+
+<h2 id="exportação-de-instrumentos-formulários-de-introdução-de-dados">Exportação de Instrumentos (Formulários de Introdução de Dados)</h2>
+<p><strong>Designação</strong></p>
+<p><em>Export Instruments (Data Entry Forms)</em></p>
+<p><strong>Descrição</strong></p>
+<p>Este método permite a exportação de uma lista de instrumentos de recolha de dados de um determinado projeto. O termo &ldquo;instrumento&rdquo;, utilizado pela plataforma REDCap, refere-se, de uma forma geral, a um &ldquo;formulário de introdução de dados&rdquo;. Assim, corresponde a &ldquo;sub-grupos&rdquo; de variáveis existentes em cada &ldquo;projeto&rdquo;, tal como se pode perceber em maior detalhe na secção <a href="../../05esquema-dados/">&ldquo;Esquema Geral da Estrutura de Dados&rdquo;</a>).</p>
+<p>A informação retornada inclui o nome único do instrumento e cada uma das etiquetas de variáveis correspondentes. Os instrumentos são enumerados na resposta pela ordem em que se encontram no projeto.</p>
+<p><strong>URL</strong></p>
+<pre><code>https://&lt;URL_base&gt;/api/
+</code></pre>
+<p><strong>Métodos de Chamada Compatíveis</strong></p>
+<p><code>POST</code></p>
+<p><strong>Parâmetros (sensível à capitulação)</strong></p>
+<ul>
+<li>
+<p><strong>Obrigatórios</strong></p>
+<ul>
+<li>
+<p><code>token</code> - Chave de API específica de um determinado  utilizador e projeto/grupo de variáveis (ver <a href="../../05esquema-dados/">&ldquo;Esquema Geral da Estrutura de Dados&rdquo;</a>).</p>
+</li>
+<li>
+<p><code>format</code> - <code>csv</code>, <code>json</code>, <code>xml</code> [default]</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Resposta</strong></p>
+<p>Retorna os instrumentos de um projeto no formato especificado e pela ordem pela qual surgem no projeto.</p>
+<h2 id="exportação-de-ficheiro-pdf-dos-instrumentos">Exportação de Ficheiro PDF dos Instrumentos</h2>
+<p><strong>Designação</strong></p>
+<p><em>Export PDF file of Data Collection Instruments</em> (quer em branco quer com dados)</p>
+<p><strong>Descrição</strong></p>
+<p>Este método permite a exportação de um ficheiro PDF para qualquer das seguintes situações:</p>
+<ol>
+<li>Um único instrumento de recolha de dados (em branco)</li>
+<li>Todos os instrumentos (em branco)</li>
+<li>Um único instrumento (com os dados de um único registo)</li>
+<li>Todos os instrumentos (com os dados de um único registo)</li>
+<li>Todos os instrumentos (com os dados de todos os registos)</li>
+</ol>
+<blockquote>
+<p>NOTA: os privilégios de acesso de cada utilizador aplicam-se também aos dados exportados através destes PDFs. Assim, por exemplo os utilizadores que tenham privilégios de exportação de dados desidentificados irão ver alguns dos dados omissos nos campos do PDF e os utilizadores que não possuam permissão de exportação irão receber uma mensagem de erro.</p>
+</blockquote>
+<p><strong>URL</strong></p>
+<pre><code>https://&lt;URL_base&gt;/api/
+</code></pre>
+<p><strong>Métodos de Chamada Compatíveis</strong></p>
+<p><code>POST</code></p>
+<p><strong>Parâmetros (sensível à capitulação)</strong></p>
+<ul>
+<li>
+<p><strong>Obrigatórios</strong></p>
+<ul>
+<li>
+<p><code>token</code> - Chave de API específica de um determinado  utilizador e projeto/grupo de variáveis (ver <a href="../../05esquema-dados/">&ldquo;Esquema Geral da Estrutura de Dados&rdquo;</a>).</p>
+</li>
+<li>
+<p><code>content</code> - <code>pdf</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Opcionais</strong></p>
+<ul>
+<li>
+<p><code>record</code> - o ID do registo (<em>record ID</em>*). Por defeito, este valor está em branco e mesmo assim irá retornar um PDF em branco (isto é, sem dados). Se o ID de registo for especificado, irá retornar um instrumento/todos os instrumentos com os dados de apenas aquele registo.</p>
+</li>
+<li>
+<p><code>instrument</code> - nome único de um instrumento (corresponde à segunda coluna do <em>Data Dictionary</em>). Este valor encontra-se em branco por defeito, o que retorna todos os instrumentos. Se o <code>record</code>não estiver em branco e o <code>instrument</code> estiver em branco, retorna todos os instrumentos populados com dados desse determinado registo.</p>
+</li>
+<li>
+<p><code>allRecords</code> - o valor deste parâmetro não importa e é ignorado. Se este parâmetro tiver algum valor, todos os instrumentos serão retornados, populados com dados de todos os registos. Ou seja, se este parâmetro tiver algum valor, os parâmetros <code>record</code> e <code>instrument</code> são ignorados.</p>
+</li>
+<li>
+<p><code>compactDisplay</code> - colocar o valor <code>TRUE</code>para obter um PDF com formatação compactada que exclui campos que não tenham dados salvos e exclui escolhas múltiplas não selecionadas. Se atribuido o valor <code>FALSE</code>, todos os campos são mostrados normalmente.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>returnFormat</code> - <code>csv</code>, <code>json</code>, <code>xml</code> [default] - este parâmetro apenas é utilizado em relação ao formato de qualquer mensagem de erro que possa ser retornada.</p>
+</li>
+</ul>
+<p><strong>Resposta</strong></p>
+<p>Ficheiro PDF que contem todos os instrumentos de recolha de dados de um projeto, em que os instrumentos podem encontrar-se em branco (sem dados), com dados de apenas um registo ou dados de todos os registos do projeto.</p>
+
+
+    
+
+
+                    
+                    <div class="row"><div class="position-relative mx-auto col-lg-9">
+                          <div class="bg-primary overflow-hidden p-3 mt-5 shadow">
+
+    <h4 class="text-white text-center">Continuar a Leitura</h4>
+
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/marianacpais/API_ECSM/06metodos/01nomes-campos/" title="Nomes dos Campos"><i class="fas fa-chevron-left p-1"></i>Nomes dos Campos</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/marianacpais/API_ECSM/06metodos/03metadados/" title="Metadados">Metadados<i class="fas fa-chevron-right p-1"></i></a>
+    </div>
+</div>
+
+
+                        </div></div> 
+
+                </div>
+
+            </div> 
+
+        </div> 
+<script src="https://github.com/marianacpais/API_ECSM/lib/jquery.min.js"></script> 
+<script src="https://github.com/marianacpais/API_ECSM/lib/popper.min.js"></script> 
+
+<script src="https://github.com/marianacpais/API_ECSM/js/bootstrap.min.js"></script> 
+
+
+<script type="text/javascript" src="/marianacpais/API_ECSM/plugins/lunr.min.js"></script>
+<script type="text/javascript" src="/marianacpais/API_ECSM/plugins/auto-complete.js"></script>
+<link href="/marianacpais/API_ECSM/plugins/auto-complete.css" rel="stylesheet">
+<script type="text/javascript">
+  
+      var baseurl = "https:\/\/github.com\/marianacpais\/API_ECSM\/";
+  
+</script>
+<script type="text/javascript" src="/marianacpais/API_ECSM/plugins/search.js"></script>
+
+
+<script type="text/javascript" src="/marianacpais/API_ECSM/plugins/clipboard.js"></script>
+<script>
+  new ClipboardJS('.btn');
+</script>
+</body>
+</html>
