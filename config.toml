@@ -1,4 +1,4 @@
-baseURL = 'https://marianacpais.github.io/API_ECSM/'
+baseURL = 'https://marianacpais.github.io/API_ECSM/public/'
 languageCode = 'pt-pt'
 title = 'Documentação da API das ECSM'
 theme = "ace-documentation"
